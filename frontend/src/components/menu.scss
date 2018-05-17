@@ -1,0 +1,15 @@
+@import "../themes/colors";
+@import "../themes/fonts";
+
+.menu-section {
+  background-color: $color-light-green;
+  height: 60px;
+  width: 100%;
+}
+
+.menu-section a {
+  font-family: $font-family;
+  font-size: 18px;
+  color: $color-black;
+  text-decoration: none;
+}

@@ -1,0 +1,10 @@
+.menu-section {
+  background-color: #ecf7ea;
+  height: 60px;
+  width: 100%; }
+
+.menu-section a {
+  font-family: "helvetica", sans-serif;
+  font-size: 18px;
+  color: #000;
+  text-decoration: none; }
