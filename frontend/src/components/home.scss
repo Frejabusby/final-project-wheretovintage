@@ -1,0 +1,7 @@
+@import "../themes/colors";
+@import "../themes/fonts";
+@import "../themes/flexbox";
+
+.map-section {
+  @extend %flex-box-row;
+}

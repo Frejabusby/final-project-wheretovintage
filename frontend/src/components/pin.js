@@ -4,28 +4,29 @@ import StoreInfo from "./store-info"
 import "./pin.css"
 
 class Pin extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      pinInfoVisible: false
-    }
-  }
-
-  handlePinClick = event => {
-    this.setState({ pinInfoVisible: !this.state.pinInfoVisible })
-  }
+  // constructor(props) {
+  //   super(props)
+  //   this.state = {
+  //     pinInfoVisible: false
+  //   }
+  // }
+  //
+  // handlePinClick = () => {
+  //   this.setState({ pinInfoVisible: !this.state.pinInfoVisible })
+  // }
 
   render() {
-
-
-    console.log(this.props)
     return (
       <div>
-      <Link to={`/stores/${this.props.id}`} >
-      <div className="pin">
+        {/* <div>
+        {/* {this.state.pinInfoVisible ? <StoreInfo name={this.props.name} /> : null} */}
+      {/* </div> */}
+      <div onClick={this.handlePinClick}>
+        <Link to={`/${this.props.id}/${this.props.name}`} >
+          <div className="pin">
+          </div>
+        </Link>
       </div>
-      </Link>
-      {this.state.pinInfoVisible ? <StoreInfo key={this.props.id} /> : null}
     </div>
     )
   }

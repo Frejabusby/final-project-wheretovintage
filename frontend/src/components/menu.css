@@ -1,10 +1,18 @@
 .menu-section {
-  background-color: #ecf7ea;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.menu-section {
+  justify-content: center;
+  align-items: center;
+  background-color: #9d5770;
   height: 60px;
   width: 100%; }
 
 .menu-section a {
-  font-family: "helvetica", sans-serif;
-  font-size: 18px;
-  color: #000;
-  text-decoration: none; }
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 24px;
+  color: #3e0b1d;
+  text-decoration: none;
+  margin: 10px 20px; }

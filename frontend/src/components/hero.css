@@ -1,0 +1,19 @@
+.hero-section {
+  display: flex;
+  flex-direction: column; }
+
+.hero-section {
+  align-items: center;
+  padding: 20px;
+  background-color: #fff0f5;
+  color: #9d5770; }
+
+.hero-text {
+  font-size: 20px;
+  font-family: "Nanum Gothic", sans-serif;
+  margin: 10px 0px;
+  text-align: center; }
+
+@media (min-width: 600px) {
+  .hero-section {
+    padding: 50px 100px; } }

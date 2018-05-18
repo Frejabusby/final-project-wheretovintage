@@ -28,15 +28,19 @@ class Map extends React.Component {
   }
 
   render() {
-  // console.log(apiKey.apikey)
     return (
-      <div style={{ height: '100vh', width: '100%' }}>
+      <div style={{ height: '100vh', width: '60%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: apiKey.apikey }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom} >
           {this.state.storeList.map(store => (
-            <Pin lat={store.lat} lng={store.long} key={store._id} id={store.id} />
+            <Pin
+              lat={store.lat}
+              lng={store.long}
+              key={store._id}
+              id={store.id}
+              name={store.name} />
           ))}
         </GoogleMapReact>
       </div>

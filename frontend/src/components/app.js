@@ -1,10 +1,8 @@
 import React from "react"
-import { HashRouter, Route } from "react-router-dom"
+import { HashRouter, Route, Switch } from "react-router-dom"
 import Menu from "./menu"
-import Hero from "./hero"
+import Home from "./home"
 import StoresList from "./store-list"
-import StoreInfo from "./store-info"
-import Map from "./map"
 
 class App extends React.Component {
 
@@ -13,10 +11,11 @@ class App extends React.Component {
         <HashRouter>
           <div>
             <Menu />
-            <Hero />
-            <Route path="/" component={Map} />
-            <Route exact path="/stores" component={StoresList} />
-            <Route path="/stores/:id" component={StoreInfo} />
+            <Switch>
+              <Route path="/stores" component={StoresList} />
+              <Route path="/:name" component={Home} />
+              <Route path="/" component={Home} />
+            </Switch>
           </div>
       </HashRouter>
     )

@@ -1,28 +1,14 @@
 import React from "react"
+import Map from "./map"
+import "./store-info.css"
 
 class StoreInfo extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      storeList: []
-    }
-  }
-
-  componentDidMount() {
-    fetch("http://localhost:8080/stores").then(response => (
-      response.json()
-    )).then(json => {
-      this.setState({ storeList: json })
-    })
-  }
 
   render() {
-    console.log("store info props: ", this.props)
     return (
-      <div>
-        {this.state.storeList.map(storeInfo => (
-          <h2>{storeInfo.name}</h2>
-        ))}
+      <div className="store-section">
+        <h1>{this.props.id}</h1>
+          <h2>{this.props.name}</h2>
       </div>
     )
   }

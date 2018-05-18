@@ -8,7 +8,7 @@ class Menu extends React.Component {
     return (
       <div className="menu-section">
         <Link to="/">Home</Link>
-        <Link to="/stores">List of stores</Link>
+        <Link to="/stores">List all stores</Link>
       </div>
     )
   }

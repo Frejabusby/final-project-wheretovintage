@@ -1,15 +1,26 @@
 @import "../themes/colors";
 @import "../themes/fonts";
+@import "../themes/flexbox";
 
 .menu-section {
-  background-color: $color-light-green;
+  @extend %flex-box-row;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-middle-pink;
   height: 60px;
   width: 100%;
 }
 
 .menu-section a {
-  font-family: $font-family;
-  font-size: 18px;
-  color: $color-black;
+  font-family: $nanum;
+  font-size: 24px;
+  color: $color-dark-pink;
   text-decoration: none;
+  margin: 10px 20px;
+}
+
+@media (min-width: 600px) {
+  .menu-section {
+
+  }
 }

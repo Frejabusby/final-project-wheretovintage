@@ -1,0 +1,25 @@
+@import "../themes/flexbox";
+@import "../themes/colors";
+@import "../themes/fonts";
+
+.hero-section {
+  @extend %flex-box-column;
+  align-items: center;
+  padding: 20px;
+  background-color: $color-light-pink;
+  color: $color-middle-pink;
+}
+
+.hero-text {
+  font-size: 20px;
+  font-family: $nanum;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+
+@media (min-width: 600px) {
+  .hero-section {
+    padding: 50px 100px;
+  }
+}
