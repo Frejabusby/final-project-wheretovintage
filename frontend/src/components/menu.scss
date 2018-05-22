@@ -6,7 +6,7 @@
   @extend %flex-box-row;
   justify-content: center;
   align-items: center;
-  background-color: $color-middle-pink;
+  background-color: $color-dark-green;
   height: 60px;
   width: 100%;
 }
@@ -14,7 +14,7 @@
 .menu-section a {
   font-family: $nanum;
   font-size: 24px;
-  color: $color-dark-pink;
+  color: $color-middle-gray;
   text-decoration: none;
   margin: 10px 20px;
 }

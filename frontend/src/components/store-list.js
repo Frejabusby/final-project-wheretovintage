@@ -20,7 +20,7 @@ class StoresList extends React.Component {
     return (
       <div className="storelist-section">
         {this.state.storeList.map(store => (
-          <div className="store-section">
+          <div className="store-container">
           <h2>{store.name}</h2>
           <div className="storelist-text">
             <h3><a href={`tel: require(${store.phoneNumber})`}>{store.phoneNumber}</a></h3>

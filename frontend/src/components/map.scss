@@ -1,0 +1,14 @@
+@-webkit-keyframes slideIn {
+    from {margin-left: 0%;}
+    to {margin-left: -40%;}
+}
+
+.map-section {
+  height: 100vh;
+  width: 100%;
+  transition: margin-left 2s;
+}
+
+.shows-store-info.map-section {
+  margin-left: 40%;
+}

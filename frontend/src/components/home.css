@@ -1,4 +1,7 @@
-.map-section {
+.map-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; }
+
+.map-container {
+  position: relative; }

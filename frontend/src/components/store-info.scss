@@ -1,3 +1,51 @@
+@import "../themes/colors";
+
+@-webkit-keyframes slideIn {
+    from {transform: translateX(-100%)}
+    to {transform: translateX(0%)}
+}
+
 .store-section {
+  background-color: $color-light-gray;
+  height: 100%;
   width: 40%;
+  position: absolute;
+  animation-name: fadeIn 2s;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+  padding-top: 60px;
+}
+
+.close {
+  border: none;
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+}
+
+.close::before, .close::after {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 2px;
+  background-color: $color-middle-pink;
+}
+
+.close::before {
+  transform: rotate(45deg);
+}
+
+.close::after {
+  transform: rotate(-45deg);
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.store-info {
+  padding: 20px;
 }

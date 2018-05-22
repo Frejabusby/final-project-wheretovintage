@@ -1,4 +1,5 @@
 import React from "react"
+import { Parallax, Background } from 'react-parallax';
 import Hero from "./hero"
 import Map from "./map"
 import StoreInfo from "./store-info"
@@ -8,7 +9,8 @@ class Home extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      storeList: []
+      storeList: [],
+      showsStoreInfo: false
     }
   }
 
@@ -20,31 +22,57 @@ class Home extends React.Component {
     })
   }
 
+  componentDidUpdate() {
+    this.ifStoreShows()
+  }
+
+  ifStoreShows = () => {
+    if(this.props.match.params.name !== undefined && this.state.showsStoreInfo === false){
+      this.setState({
+        showsStoreInfo: true
+      })
+    } else if(this.props.match.params.name === undefined && this.state.showsStoreInfo === true) {
+      this.setState({
+        showsStoreInfo: false
+      })
+    }
+  }
+
   renderStoreInfo = (paramInfo) => {
     console.log("renderstoreinfo" + paramInfo)
     return this.state.storeList.filter(store =>  (
-          store.id === paramInfo
+          store.name === paramInfo
         )).map(store => (
           <StoreInfo
             lat={store.lat}
             lng={store.long}
             key={store._id}
-            id={store.id}
-            name={store.name} />
+            name={store.name}
+            street={store.street}
+            zipcode={store.zipcode}
+            city={store.city}
+            ifStoreShows={this.hideStore} />
           ))
   }
 
   render() {
-
+    console.log("map test", this.state.showsStoreInfo)
     const paramInfo = this.props.match.params.name
 
     return(
 
       <div>
+        <Parallax
+          blur={{ min: -13, max: 15 }}
+          bgImage={require("../images/vintage-fashion.jpg")}
+          bgImageAlt="the dog"
+          strength={200} >
         <Hero />
-        <div className="map-section">
+        </Parallax>
+        <div className="map-container">
         {paramInfo && this.renderStoreInfo(paramInfo)}
-        <Map />
+        <Map
+         ifStoreShows= {this.state.showsStoreInfo} />
       </div>
       </div>
     )

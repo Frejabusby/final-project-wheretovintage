@@ -2,6 +2,7 @@
 @import "../themes/fonts";
 @import "../themes/flexbox";
 
-.map-section {
+.map-container {
   @extend %flex-box-row;
+  position: relative;
 }

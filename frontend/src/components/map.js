@@ -1,7 +1,9 @@
 import React from "react"
-import GoogleMapReact from 'google-map-react'
+import GoogleMapReact from "google-map-react"
+import { Link } from "react-router-dom"
 import Pin from "./pin"
 import apiKey from "./apikey"
+import "./map.css"
 
 class Map extends React.Component {
   constructor(props) {
@@ -29,7 +31,7 @@ class Map extends React.Component {
 
   render() {
     return (
-      <div style={{ height: '100vh', width: '60%' }}>
+      <div className={ this.props.ifStoreShows ? "shows-store-info map-section " : "map-section" }>
         <GoogleMapReact
           bootstrapURLKeys={{ key: apiKey.apikey }}
           defaultCenter={this.props.center}
