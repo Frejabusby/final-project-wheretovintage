@@ -7,8 +7,11 @@ class Menu extends React.Component {
   render() {
     return (
       <div className="menu-section">
+        <h1>WhereToVintage</h1>
+        <div className="menu-links">
         <Link to="/">Home</Link>
         <Link to="/stores">List all stores</Link>
+      </div>
       </div>
     )
   }

@@ -6,32 +6,32 @@
 }
 
 .store-section {
-  background-color: $color-light-gray;
+  background-color: $color-dark-gray;
+  color: $color-middle-gray;
   height: 100%;
   width: 40%;
   position: absolute;
-  animation-name: fadeIn 2s;
-  animation-duration: 10s;
+  animation-name: slideIn 2s;
   animation-iteration-count: 1;
-  padding-top: 60px;
+  padding-top: 80px;
 }
 
 .close {
   border: none;
   position: absolute;
-  right: 5px;
-  top: 15px;
-  width: 20px;
-  height: 20px;
+  right: 15px;
+  top: 20px;
+  width: 25px;
+  height: 25px;
   opacity: 0.7;
 }
 
 .close::before, .close::after {
   position: absolute;
   content: "";
-  height: 20px;
-  width: 2px;
-  background-color: $color-middle-pink;
+  height: 25px;
+  width: 3px;
+  background-color: $color-middle-orange;
 }
 
 .close::before {
@@ -48,4 +48,19 @@
 
 .store-info {
   padding: 20px;
+}
+
+.store-info a {
+  color: $color-middle-gray;
+  font-size: 26px;
+  text-decoration: none;
+}
+
+.store-info h2, .store-info h3 {
+  color: $color-light-gray;
+  margin: 7px 0px;
+}
+
+.store-address, .store-description {
+  padding: 20px 0px;
 }

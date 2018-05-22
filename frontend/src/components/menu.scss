@@ -6,8 +6,19 @@
   @extend %flex-box-row;
   justify-content: center;
   align-items: center;
-  background-color: $color-dark-green;
-  height: 60px;
+  background-color: $color-white;
+  width: 100%;
+}
+
+.menu-section h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.menu-links {
+  @extend %flex-box-row;
+  background-color: $color-dark-gray;
+  justify-content: center;
   width: 100%;
 }
 

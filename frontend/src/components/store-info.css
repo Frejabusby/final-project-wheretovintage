@@ -5,30 +5,30 @@
     transform: translateX(0%); } }
 
 .store-section {
-  background-color: #f7f7f7;
+  background-color: #333738;
+  color: #d0d5d4;
   height: 100%;
   width: 40%;
   position: absolute;
-  animation-name: fadeIn 2s;
-  animation-duration: 10s;
+  animation-name: slideIn 2s;
   animation-iteration-count: 1;
-  padding-top: 60px; }
+  padding-top: 80px; }
 
 .close {
   border: none;
   position: absolute;
-  right: 5px;
-  top: 15px;
-  width: 20px;
-  height: 20px;
+  right: 15px;
+  top: 20px;
+  width: 25px;
+  height: 25px;
   opacity: 0.7; }
 
 .close::before, .close::after {
   position: absolute;
   content: "";
-  height: 20px;
-  width: 2px;
-  background-color: #9d5770; }
+  height: 25px;
+  width: 3px;
+  background-color: #d5a321; }
 
 .close::before {
   transform: rotate(45deg); }
@@ -41,3 +41,15 @@
 
 .store-info {
   padding: 20px; }
+
+.store-info a {
+  color: #d0d5d4;
+  font-size: 26px;
+  text-decoration: none; }
+
+.store-info h2, .store-info h3 {
+  color: #f7f7f7;
+  margin: 7px 0px; }
+
+.store-address, .store-description {
+  padding: 20px 0px; }

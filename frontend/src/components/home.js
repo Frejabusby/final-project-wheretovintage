@@ -51,7 +51,8 @@ class Home extends React.Component {
             street={store.street}
             zipcode={store.zipcode}
             city={store.city}
-            ifStoreShows={this.hideStore} />
+            phoneNumber={store.phoneNumber}
+            description={store.description} />
           ))
   }
 
@@ -62,13 +63,13 @@ class Home extends React.Component {
     return(
 
       <div>
-        <Parallax
-          blur={{ min: -13, max: 15 }}
+        {/* <Parallax
+          blur={{ min: -12, max: 15 }}
           bgImage={require("../images/vintage-fashion.jpg")}
           bgImageAlt="the dog"
-          strength={200} >
+          strength={200} > */}
         <Hero />
-        </Parallax>
+        {/* </Parallax> */}
         <div className="map-container">
         {paramInfo && this.renderStoreInfo(paramInfo)}
         <Map

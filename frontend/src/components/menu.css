@@ -1,4 +1,4 @@
-.menu-section {
+.menu-section, .menu-links {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; }
@@ -6,8 +6,16 @@
 .menu-section {
   justify-content: center;
   align-items: center;
-  background-color: #093a34;
-  height: 60px;
+  background-color: #fff;
+  width: 100%; }
+
+.menu-section h1 {
+  text-align: center;
+  padding: 20px; }
+
+.menu-links {
+  background-color: #333738;
+  justify-content: center;
   width: 100%; }
 
 .menu-section a {

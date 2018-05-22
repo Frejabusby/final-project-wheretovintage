@@ -1,4 +1,5 @@
 import React from "react"
+import "./store-list.css"
 
 class StoresList extends React.Component {
   constructor(props) {

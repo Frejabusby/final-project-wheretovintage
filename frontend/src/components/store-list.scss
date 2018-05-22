@@ -1,0 +1,13 @@
+@import "../themes/colors";
+
+.store-container {
+  background-color: $color-light-gray;
+  padding: 20px;
+  border: 2px solid $color-middle-orange;
+}
+
+@media (min-width: 600px) {
+  .store-container {
+    padding: 50px;
+  }
+}

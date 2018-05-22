@@ -1,0 +1,8 @@
+.store-container {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border: 2px solid #d5a321; }
+
+@media (min-width: 600px) {
+  .store-container {
+    padding: 50px; } }
