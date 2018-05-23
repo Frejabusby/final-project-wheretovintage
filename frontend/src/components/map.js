@@ -29,11 +29,14 @@ class Map extends React.Component {
     })
   }
 
-  function = () => {
+  renderPin = () => {
+    let storeList = this.state.storeList
     if(this.props.paramCategory !== undefined) {
-    return this.state.storeList.filter(store =>  (
-      store.category === this.props.paramCategory
-    )).map(store => (
+      storeList = storeList.filter(store =>  (
+        store.category === this.props.paramCategory
+      ))
+    }
+    return storeList.map(store => (
       <Pin
         lat={store.lat}
         lng={store.long}
@@ -41,16 +44,7 @@ class Map extends React.Component {
         id={store.id}
         name={store.name}
         category={store.category} />
-    ))} else {
-      return this.state.storeList.map(store => (
-        <Pin
-          lat={store.lat}
-          lng={store.long}
-          key={store._id}
-          id={store.id}
-          name={store.name}
-          category={store.category} />
-      ))}
+    ))
   }
 
   render() {
@@ -62,7 +56,7 @@ class Map extends React.Component {
           bootstrapURLKeys={{ key: apiKey.apikey }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom} >
-          {this.function()}
+          {this.renderPin()}
         </GoogleMapReact>
       </div>
     )

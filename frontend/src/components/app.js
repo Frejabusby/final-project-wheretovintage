@@ -15,7 +15,7 @@ class App extends React.Component {
               <Route path="/stores" component={StoresList} />
               <Route exact path="/:category" component={Home} />
               <Route path="/:category/:name" component={Home} />
-              <Route path="/" component={Home} />
+              <Route exact path="/" component={Home} />
             </Switch>
           </div>
       </HashRouter>

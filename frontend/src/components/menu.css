@@ -24,3 +24,6 @@
   color: #d0d5d4;
   text-decoration: none;
   margin: 10px 20px; }
+
+.menu-section a:hover {
+  color: #f7f7f7; }

@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import "./categories.css"
 
 class Categories extends React.Component {
@@ -9,9 +9,10 @@ class Categories extends React.Component {
       <div className="category-section">
         {/* <button onClick={this.changeCategory}>Cloths</button>
         <button onClick={this.changeCategory}>Stuff</button> */}
-        <Link to="/cloths">Only cloths</Link>
-        <Link to="/stuff">Only stuff</Link>
-        <Link to="/">All stores</Link>
+        <p className="category-filter">Filter the stores:</p>
+        <NavLink to="/cloths" activeClassName="active">Only cloths</NavLink>
+        <NavLink to="/stuff" activeClassName="active">Only stuff</NavLink>
+        <NavLink to="/" exact activeClassName="active">All stores</NavLink>
       </div>
     )
   }

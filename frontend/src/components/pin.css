@@ -1,10 +1,12 @@
 .pin {
-  background-color: #fd4b8b;
-  height: 20px;
-  width: 20px;
-  border-radius: 100%
-}
+  background-color: #edbe46;
+  height: 15px;
+  width: 15px;
+  border: solid 2px #c8930b;
+  border-radius: 100%; }
 
-.pin:active {
-  background-color: #000;
-}
+.pin img {
+  width: 100%; }
+
+.pin:hover {
+  background-color: #c8930b; }

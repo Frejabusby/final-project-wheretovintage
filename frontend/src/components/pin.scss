@@ -1,0 +1,21 @@
+@import "../themes/colors";
+
+.pin {
+  background-color: $color-light-orange;
+  height: 15px;
+  width: 15px;
+  border: solid 2px $color-dark-orange;
+  border-radius: 100%
+}
+
+.pin img {
+  width: 100%;
+}
+
+.pin:hover {
+  background-color: $color-dark-orange;
+}
+
+// .active .pin {
+//   background-color: $color-dark-orange;
+// }

@@ -1,0 +1,36 @@
+@import "../themes/colors";
+@import "../themes/fonts";
+@import "../themes/flexbox";
+
+.category-section {
+  @extend %flex-box-row;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-dark-gray;
+  padding: 10px 0px;
+  width: 100%;
+}
+
+.category-section a, p.category-filter {
+  font-family: $nanum;
+  font-size: 20px;
+  color: $color-middle-gray;
+  margin: 5px 10px;
+  text-align: center;
+  width: 100%;
+}
+
+a.active {
+  color: $color-light-gray;
+}
+
+@media (min-width: 600px) {
+  .category-section {
+    padding: 0;
+  }
+  
+  .category-section a, p.category-filter {
+    margin: 15px 20px;
+    width: calc(25% - 40px);
+  }
+}
