@@ -1,14 +1,14 @@
 @-webkit-keyframes slideIn {
-  from {
+  0% {
     transform: translateX(-100%); }
-  to {
+  100% {
     transform: translateX(0%); } }
 
 .store-section {
   background-color: #333738;
   color: #d0d5d4;
   height: 100%;
-  width: 40%;
+  width: 75%;
   position: absolute;
   animation-name: slideIn 2s;
   animation-iteration-count: 1;
@@ -53,3 +53,7 @@
 
 .store-address, .store-description {
   padding: 20px 0px; }
+
+@media (min-width: 600px) {
+  .store-section {
+    width: 40%; } }

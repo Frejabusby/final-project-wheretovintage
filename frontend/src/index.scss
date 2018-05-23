@@ -1,4 +1,5 @@
 @import "./themes/fonts";
+@import "./themes/colors";
 
 /* Reset CSS for all browsers */
 html, body, div, span, applet, object, iframe,
@@ -47,6 +48,11 @@ h3 {
 p {
 	line-height: 1.4;
 	font-size: 16px;
+}
+
+a {
+	color: $color-light-gray;
+	text-decoration: none;
 }
 
 @media (min-width: 600px) {

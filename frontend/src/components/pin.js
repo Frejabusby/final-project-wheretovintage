@@ -8,7 +8,7 @@ class Pin extends React.Component {
   render() {
     return (
       <div>
-        <Link to={`/${this.props.name}`} >
+        <Link to={`/${this.props.category}/${this.props.name}`} >
           <div className="pin">
           </div>
         </Link>

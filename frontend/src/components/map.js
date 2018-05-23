@@ -29,21 +29,40 @@ class Map extends React.Component {
     })
   }
 
+  function = () => {
+    if(this.props.paramCategory !== undefined) {
+    return this.state.storeList.filter(store =>  (
+      store.category === this.props.paramCategory
+    )).map(store => (
+      <Pin
+        lat={store.lat}
+        lng={store.long}
+        key={store._id}
+        id={store.id}
+        name={store.name}
+        category={store.category} />
+    ))} else {
+      return this.state.storeList.map(store => (
+        <Pin
+          lat={store.lat}
+          lng={store.long}
+          key={store._id}
+          id={store.id}
+          name={store.name}
+          category={store.category} />
+      ))}
+  }
+
   render() {
+    console.log("listan", this.state.storeList)
+    console.log(this.props.paramCategory)
     return (
       <div className={ this.props.ifStoreShows ? "shows-store-info map-section " : "map-section" }>
         <GoogleMapReact
           bootstrapURLKeys={{ key: apiKey.apikey }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom} >
-          {this.state.storeList.map(store => (
-            <Pin
-              lat={store.lat}
-              lng={store.long}
-              key={store._id}
-              id={store.id}
-              name={store.name} />
-          ))}
+          {this.function()}
         </GoogleMapReact>
       </div>
     )

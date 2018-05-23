@@ -5,4 +5,5 @@
 .map-container {
   @extend %flex-box-row;
   position: relative;
+  background-color: $color-dark-gray;
 }

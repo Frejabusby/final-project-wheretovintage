@@ -8,7 +8,7 @@ class StoreInfo extends React.Component {
   render() {
     return (
       <div className="store-section">
-        <Link to="/"><div className="close"></div></Link>
+        <Link to="/all"><div className="close"></div></Link>
         <div className="store-info">
           <h2>{this.props.name}</h2>
           <div className="store-address">

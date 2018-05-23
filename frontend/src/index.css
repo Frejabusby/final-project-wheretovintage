@@ -40,6 +40,10 @@ p {
   line-height: 1.4;
   font-size: 16px; }
 
+a {
+  color: #f7f7f7;
+  text-decoration: none; }
+
 @media (min-width: 600px) {
   h1 {
     font-size: 60px; } }

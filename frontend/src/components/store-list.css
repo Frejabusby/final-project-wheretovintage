@@ -1,8 +1,48 @@
 .store-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.store-container {
   background-color: #f7f7f7;
-  padding: 20px;
-  border: 2px solid #d5a321; }
+  color: #333738;
+  padding: 30px;
+  border-bottom: 3px solid #edbe46; }
+
+.storelist-description, .store-container h2 {
+  margin-bottom: 15px;
+  width: 100%; }
+
+.store-container a {
+  border-bottom: solid 2px #333738;
+  color: #333738; }
+
+.store-container a:hover {
+  background-color: #333738;
+  color: #f7f7f7;
+  padding: 4px; }
+
+.storelist-description p, .phone-number {
+  margin-bottom: 10px; }
+
+.storelist-address, .storelist-info {
+  margin: 15px 0px;
+  width: 100%; }
+
+.phone-number {
+  max-width: 250px; }
 
 @media (min-width: 600px) {
   .store-container {
-    padding: 50px; } }
+    padding: 50px; }
+  .storelist-address, .storelist-info {
+    width: calc(50% - 10px); }
+  .storelist-address {
+    margin: 0px 10px 0px 0px; }
+  .storelist-info {
+    text-align: right;
+    margin: 0px 0px 0px 10px; } }
+
+@media (min-width: 900px) {
+  .store-container {
+    padding: 50px 200px; } }

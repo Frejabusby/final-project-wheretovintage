@@ -25,8 +25,8 @@ const Store = mongoose.model("Store", {
   city: String,
   phoneNumber: Number,
   description: String,
-  clothes: Boolean,
-  stuff: Boolean,
+  site: String,
+  category: String,
   openinghours: String
 })
 

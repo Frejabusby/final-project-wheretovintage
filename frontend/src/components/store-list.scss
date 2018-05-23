@@ -1,13 +1,64 @@
 @import "../themes/colors";
+@import "../themes/flexbox";
 
 .store-container {
+  @extend %flex-box-row;
   background-color: $color-light-gray;
-  padding: 20px;
-  border: 2px solid $color-middle-orange;
+  color: $color-dark-gray;
+  padding: 30px;
+  border-bottom: 3px solid $color-light-orange;
+}
+
+.storelist-description, .store-container h2 {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.store-container a {
+  border-bottom: solid 2px $color-dark-gray;
+  color: $color-dark-gray;
+}
+
+.store-container a:hover {
+  background-color: $color-dark-gray;
+  color: $color-light-gray;
+  padding: 4px;
+}
+
+.storelist-description p, .phone-number {
+  margin-bottom: 10px;
+}
+
+.storelist-address, .storelist-info {
+  margin: 15px 0px;
+  width: 100%;
+}
+
+.phone-number {
+  max-width: 250px;
 }
 
 @media (min-width: 600px) {
   .store-container {
     padding: 50px;
+  }
+
+  .storelist-address, .storelist-info {
+    width: calc(50% - 10px);
+  }
+
+  .storelist-address {
+    margin: 0px 10px 0px 0px;
+  }
+
+  .storelist-info {
+    text-align: right;
+    margin: 0px 0px 0px 10px;
+  }
+}
+
+@media (min-width: 900px) {
+  .store-container {
+    padding: 50px 200px;
   }
 }

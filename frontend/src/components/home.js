@@ -3,6 +3,7 @@ import { Parallax, Background } from 'react-parallax';
 import Hero from "./hero"
 import Map from "./map"
 import StoreInfo from "./store-info"
+import Categories from "./categories"
 import "./home.css"
 
 class Home extends React.Component {
@@ -57,7 +58,6 @@ class Home extends React.Component {
   }
 
   render() {
-    console.log("map test", this.state.showsStoreInfo)
     const paramInfo = this.props.match.params.name
 
     return(
@@ -70,10 +70,12 @@ class Home extends React.Component {
           strength={200} > */}
         <Hero />
         {/* </Parallax> */}
+        <Categories />
         <div className="map-container">
         {paramInfo && this.renderStoreInfo(paramInfo)}
         <Map
-         ifStoreShows= {this.state.showsStoreInfo} />
+          paramCategory={this.props.match.params.category}
+         ifStoreShows={this.state.showsStoreInfo} />
       </div>
       </div>
     )

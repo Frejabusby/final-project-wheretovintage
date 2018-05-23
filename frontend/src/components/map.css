@@ -1,13 +1,12 @@
-@-webkit-keyframes slideIn {
-  from {
-    margin-left: 0%; }
-  to {
-    margin-left: -40%; } }
-
 .map-section {
+  background-color: #333738;
   height: 100vh;
   width: 100%;
   transition: margin-left 2s; }
 
 .shows-store-info.map-section {
-  margin-left: 40%; }
+  margin-left: 75%; }
+
+@media (min-width: 600px) {
+  .shows-store-info.map-section {
+    margin-left: 40%; } }
