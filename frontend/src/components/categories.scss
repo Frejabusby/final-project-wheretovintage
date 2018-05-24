@@ -20,15 +20,19 @@
   width: 100%;
 }
 
+.category-section a:hover {
+  color: $color-white;
+}
+
 a.active {
-  color: $color-light-gray;
+  color: $color-white;
 }
 
 @media (min-width: 600px) {
   .category-section {
     padding: 0;
   }
-  
+
   .category-section a, p.category-filter {
     margin: 15px 20px;
     width: calc(25% - 40px);

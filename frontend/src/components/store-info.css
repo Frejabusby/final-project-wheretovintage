@@ -12,15 +12,30 @@
   position: absolute;
   animation-name: slideIn 2s;
   animation-iteration-count: 1;
-  padding-top: 80px; }
+  padding-top: 80px;
+  overflow: scroll; }
+
+.store-section a:not(.close-cross) {
+  border-bottom: solid 2px #f7f7f7;
+  color: #f7f7f7;
+  font-size: 24px; }
+
+.store-section a:hover:not(.close-cross) {
+  background-color: #f7f7f7;
+  color: #333738;
+  padding: 4px; }
+
+.store-section h2, .store-section h3 {
+  color: #f7f7f7;
+  margin: 7px 0px; }
 
 .close {
   border: none;
   position: absolute;
   right: 15px;
   top: 20px;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   opacity: 0.7; }
 
 .close::before, .close::after {
@@ -42,16 +57,7 @@
 .store-info {
   padding: 20px; }
 
-.store-info a {
-  color: #d0d5d4;
-  font-size: 26px;
-  text-decoration: none; }
-
-.store-info h2, .store-info h3 {
-  color: #f7f7f7;
-  margin: 7px 0px; }
-
-.store-address, .store-description {
+.store-address, .store-description, .store-openinghours {
   padding: 20px 0px; }
 
 @media (min-width: 600px) {

@@ -2,7 +2,7 @@
   background-color: #333738;
   height: 100vh;
   width: 100%;
-  transition: margin-left 2s; }
+  transition: margin-left 1s; }
 
 .shows-store-info.map-section {
   margin-left: 75%; }

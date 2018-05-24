@@ -18,8 +18,11 @@
   text-align: center;
   width: 100%; }
 
+.category-section a:hover {
+  color: #fff; }
+
 a.active {
-  color: #f7f7f7; }
+  color: #fff; }
 
 @media (min-width: 600px) {
   .category-section {

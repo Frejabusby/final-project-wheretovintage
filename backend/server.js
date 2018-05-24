@@ -39,8 +39,16 @@ app.post("/stores", (req, res) => {
   .catch(err => { res.status(400).send(err) })
 })
 
-app.get("/stores", (req, res) => {
+app.get("/store", (req, res) => {
   Store.find().then(store => {
+    res.json(store)
+  })
+})
+
+app.get("/stores/:skip", (req, res) => {
+  console.log(req.params.skip)
+  const skip = parseInt(req.params.skip)
+  Store.find().sort( { "name": 1 } ).limit(5).skip(skip).then(store => {
     res.json(store)
   })
 })

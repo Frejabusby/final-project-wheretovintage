@@ -14,6 +14,24 @@
   animation-name: slideIn 2s;
   animation-iteration-count: 1;
   padding-top: 80px;
+  overflow: scroll;
+}
+
+.store-section a:not(.close-cross) {
+  border-bottom: solid 2px $color-light-gray;
+  color: $color-light-gray;
+  font-size: 24px;
+}
+
+.store-section a:hover:not(.close-cross) {
+  background-color: $color-light-gray;
+  color: $color-dark-gray;
+  padding: 4px;
+}
+
+.store-section h2, .store-section h3 {
+  color: $color-light-gray;
+  margin: 7px 0px;
 }
 
 .close {
@@ -21,8 +39,8 @@
   position: absolute;
   right: 15px;
   top: 20px;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   opacity: 0.7;
 }
 
@@ -50,23 +68,12 @@
   padding: 20px;
 }
 
-.store-info a {
-  color: $color-middle-gray;
-  font-size: 26px;
-  text-decoration: none;
-}
-
-.store-info h2, .store-info h3 {
-  color: $color-light-gray;
-  margin: 7px 0px;
-}
-
-.store-address, .store-description {
+.store-address, .store-description, .store-openinghours {
   padding: 20px 0px;
 }
 
 @media (min-width: 600px) {
   .store-section {
     width: 40%;
-}
+  }
 }
