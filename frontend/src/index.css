@@ -23,6 +23,7 @@ time, mark, audio, video {
   box-sizing: border-box; }
 
 h1 {
+  color: #333738;
   font-family: "Merriweather", serif;
   font-size: 40px;
   margin: 7px; }
