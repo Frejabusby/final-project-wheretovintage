@@ -58,9 +58,7 @@ class Home extends React.Component {
   )
 
   render() {
-    console.log("home first", this.props)
     const paramInfo = this.props.match.params.name
-    console.log("home second", this.props.match)
     return (
       <div>
         <Hero />
@@ -69,7 +67,6 @@ class Home extends React.Component {
           {paramInfo && this.renderStoreInfo(paramInfo)}
           <Map
             paramCategory={this.props.match.params.category}
-            paramPath={this.props.match.path}
             ifStoreShows={this.state.showsStoreInfo} />
         </div>
       </div>

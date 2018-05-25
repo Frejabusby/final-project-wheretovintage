@@ -9,7 +9,11 @@
   border-bottom: 3px solid $color-light-orange;
 }
 
-.storelist-description, .store-container h2 {
+.storelist-description,
+.storelist-content-adress,
+.storelist-content-phone,
+.storelist-content-site,
+.store-container h2 {
   margin-bottom: 15px;
   width: 100%;
 }
@@ -17,6 +21,7 @@
 .store-container a {
   border-bottom: solid 2px $color-dark-gray;
   color: $color-dark-gray;
+  font-size: 20px;
 }
 
 .store-container a:hover {
@@ -25,17 +30,13 @@
   padding: 4px;
 }
 
-.storelist-description p, .phone-number {
-  margin-bottom: 10px;
-}
-
-.storelist-address, .storelist-info {
+.storelist-content-first, .storelist-content-second {
   margin: 15px 0px;
   width: 100%;
 }
 
-.phone-number {
-  max-width: 250px;
+.storelist-content-phone h3 {
+  margin-bottom: 5px;
 }
 
 @media (min-width: 600px) {
@@ -43,17 +44,17 @@
     padding: 50px;
   }
 
-  .storelist-address, .storelist-info {
+  .storelist-content-first, .storelist-content-second {
     width: calc(50% - 10px);
   }
 
-  .storelist-address {
+  .storelist-content-first {
     margin: 0px 10px 0px 0px;
   }
 
-  .storelist-info {
-    text-align: right;
+  .storelist-content-second {
     margin: 0px 0px 0px 10px;
+    text-align: right;
   }
 }
 

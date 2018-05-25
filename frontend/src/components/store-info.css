@@ -12,7 +12,7 @@
   position: absolute;
   animation-name: slideIn 2s;
   animation-iteration-count: 1;
-  padding-top: 80px;
+  padding: 70px 0px;
   overflow: scroll; }
 
 .store-section a:not(.close-cross) {
@@ -55,11 +55,17 @@
   opacity: 1; }
 
 .store-info {
-  padding: 20px; }
+  padding: 0px 30px; }
 
-.store-address, .store-description, .store-openinghours {
+.store-address, .store-description, .store-openinghours, .store-phonenumber {
   padding: 20px 0px; }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .store-section {
-    width: 40%; } }
+    width: 55%; } }
+
+@media (min-width: 900px) {
+  .store-section {
+    width: 40%; }
+  .store-info {
+    padding: 0px 50px; } }

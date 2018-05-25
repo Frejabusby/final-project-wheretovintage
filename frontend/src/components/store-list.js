@@ -40,17 +40,27 @@ class StoresList extends React.Component {
             <h2>{store.name}</h2>
             <div className="storelist-description">
               <p>{store.description}</p>
-              <a href={store.site} target="_blank">Visit their site</a>
             </div>
-            <div className="storelist-address">
-              <p>{store.street}</p>
-              <p>{store.zipcode}</p>
-              <p>{store.city}</p>
+            <div className="storelist-content-first">
+              <div className="storelist-content-adress">
+                <h3>Address</h3>
+                <p>{store.street}</p>
+                <p>{store.zipcode}</p>
+                <p>{store.city}</p>
+              </div>
+              <div className="storelist-openinghours">
+                <h3>Openinghours</h3>
+                <p>{store.openinghours}</p>
+              </div>
             </div>
-            <div className="storelist-info">
-              <p className="phone-number">Phonenumber <a href={`tel: require(${store.phoneNumber})`}>{store.phoneNumber}</a></p>
-              <h3>Openinghours</h3>
-              <p>{store.openinghours}</p>
+            <div className="storelist-content-second">
+              <div className="storelist-content-phone">
+                <h3>Phone number</h3>
+                <a href={`tel: require(${store.phoneNumber})`}>{store.phoneNumber}</a>
+              </div>
+              <div className="storelist-content-site">
+                <a href={store.site} target="_blank">Visit their site</a>
+              </div>
             </div>
           </div>
         ))}

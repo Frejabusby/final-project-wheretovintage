@@ -16,8 +16,8 @@ class Map extends React.Component {
 
   static defaultProps = {
     center: {
-      lat: 59.334591,
-      lng: 18.063240
+      lat: 59.323688,
+      lng: 18.066630
     },
     zoom: 13
   }
@@ -32,7 +32,7 @@ class Map extends React.Component {
 
   renderPin = () => {
     let storeList = this.state.storeList
-    if (this.props.paramCategory !== undefined && this.props.paramPath !== "/:name") {
+    if (this.props.paramCategory !== undefined) {
       storeList = storeList.filter(store => (
         store.category === this.props.paramCategory
       ))
@@ -50,7 +50,6 @@ class Map extends React.Component {
   }
 
   render() {
-    console.log("MAP", this.props)
     return (
       <div id="map" className={this.props.ifStoreShows ? "shows-store-info map-section " : "map-section"}>
         <GoogleMapReact

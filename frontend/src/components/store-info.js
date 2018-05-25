@@ -16,11 +16,13 @@ class StoreInfo extends React.Component {
             <p>{this.props.zipcode}</p>
             <p>{this.props.city}</p>
           </div>
-          <h3>Phone number</h3>
-          <a href={`tel: require(${this.props.phoneNumber})`}>{this.props.phoneNumber}</a>
           <div className="store-description">
             <h3>About</h3>
             <p>{this.props.description}</p>
+          </div>
+          <div className="store-phonenumber">
+            <h3>Phone number</h3>
+            <a href={`tel: require(${this.props.phoneNumber})`}>{this.props.phoneNumber}</a>
           </div>
           <div className="store-openinghours">
             <h3>Openinghours</h3>

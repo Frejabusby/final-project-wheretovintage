@@ -1,12 +1,16 @@
 .map-section {
   background-color: #333738;
-  height: 100vh;
+  height: calc(100vh - 60px);
   width: 100%;
   transition: margin-left 1s; }
 
 .shows-store-info.map-section {
   margin-left: 75%; }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
+  .shows-store-info.map-section {
+    margin-left: 55%; } }
+
+@media (min-width: 900px) {
   .shows-store-info.map-section {
     margin-left: 40%; } }

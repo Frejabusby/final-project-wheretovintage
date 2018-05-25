@@ -26,8 +26,8 @@ const Store = mongoose.model("Store", {
   phoneNumber: Number,
   description: String,
   site: String,
-  category: String,
-  openinghours: String
+  openinghours: String,
+  category: String
 })
 
 //get the model and saves it on the database
