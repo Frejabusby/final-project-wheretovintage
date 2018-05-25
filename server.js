@@ -8,8 +8,8 @@ const app = express()
 app.use(bodyParser.json())
 app.use(cors())
 
-
-mongoose.connect("mongodb://localhost/secondhandStore", { useMongoClient: true })
+const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/secondhandStore"
+mongoose.connect(mongoUrl, { useMongoClient: true })
 mongoose.Promise = Promise
 
 mongoose.connection.on("error", err => console.error("Connection error:", err))
@@ -53,6 +53,7 @@ app.get("/stores/:skip", (req, res) => {
   })
 })
 
-app.listen(8080, () =>
-  console.log("Example app listening on port 3000!")
+const port = process.env.PORT || 8080
+app.listen(port, () =>
+  console.log(`Server running on port ${port}`)
 )
