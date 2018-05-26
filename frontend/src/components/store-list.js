@@ -1,5 +1,5 @@
 import React from "react"
-import Pagination from "./pagination"
+// import Pagination from "./pagination"
 import "./store-list.css"
 
 class StoresList extends React.Component {
@@ -12,23 +12,11 @@ class StoresList extends React.Component {
 
   componentDidMount() {
     console.log(this.props)
+    // fetch(`https://wheretovintage.herokuapp.com/stores/${this.props.match.params.skip}`).then(response => (
     fetch(`http://localhost:8080/stores/${this.props.match.params.skip}`).then(response => (
       response.json()
     )).then(json => {
-      // const compare = (a, b) => {
-      //   const nameA = a.name.toUpperCase()
-      //   const nameB = b.name.toUpperCase()
-      //
-      //   if (nameA > nameB) {
-      //     return 1
-      //   } else if (nameA < nameB) {
-      //     return -1
-      //   } else {
-      //     return 0
-      //   }
-      // }
       this.setState({ storeList: json })
-      // this.setState({ storeList: json.sort(compare) })
     })
   }
 
@@ -36,7 +24,7 @@ class StoresList extends React.Component {
     return (
       <div className="storelist-section">
         {this.state.storeList.map(store => (
-          <div className="store-container">
+          <div className="store-container" key={store.id}>
             <h2>{store.name}</h2>
             <div className="storelist-description">
               <p>{store.description}</p>
@@ -64,7 +52,7 @@ class StoresList extends React.Component {
             </div>
           </div>
         ))}
-        <Pagination />
+        {/* <Pagination /> */}
       </div>
     )
   }

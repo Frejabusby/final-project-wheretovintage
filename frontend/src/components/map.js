@@ -23,7 +23,7 @@ class Map extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8080/store").then(response => (
+    fetch("https://wheretovintage.herokuapp.com/store").then(response => (
       response.json()
     )).then(json => {
       this.setState({ storeList: json })
@@ -41,8 +41,7 @@ class Map extends React.Component {
       <Pin
         lat={store.lat}
         lng={store.long}
-        key={store._id}
-        id={store.id}
+        key={store.id}
         name={store.name}
         category={store.category}
         pathName={this.props.match.params.category} />

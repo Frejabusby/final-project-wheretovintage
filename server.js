@@ -48,10 +48,15 @@ app.get("/store", (req, res) => {
 app.get("/stores/:skip", (req, res) => {
   console.log(req.params.skip)
   const skip = parseInt(req.params.skip)
-  Store.find().sort( { "name": 1 } ).limit(5).skip(skip).then(store => {
+  Store.find().sort( { "name": 1 } ).then(store => {
     res.json(store)
   })
 })
+
+// Store.find().sort( { "name": 1 } ).limit(5).skip(skip).then(store => {
+//   res.json(store)
+// })
+
 
 const port = process.env.PORT || 8080
 app.listen(port, () =>

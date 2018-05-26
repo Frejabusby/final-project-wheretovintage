@@ -15,7 +15,7 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8080/store").then(response => (
+    fetch("https://wheretovintage.herokuapp.com/store").then(response => (
       response.json()
     )).then(json => {
       this.setState({ storeList: json })
@@ -45,7 +45,7 @@ class Home extends React.Component {
       <StoreInfo
         lat={store.lat}
         lng={store.long}
-        key={store._id}
+        key={store.id}
         name={store.name}
         street={store.street}
         zipcode={store.zipcode}
