@@ -1,0 +1,20 @@
+.pagination-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.pagination-section {
+  justify-content: center;
+  align-items: center;
+  background-color: #333738;
+  padding: 20px;
+  width: 100%; }
+
+.pagination-section a {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 24px;
+  color: #d0d5d4;
+  margin: 10px 20px; }
+
+.pagination-section a:hover, a.active {
+  color: #fff; }

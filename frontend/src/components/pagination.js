@@ -1,36 +1,39 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import "./menu.css"
+import { NavLink, withRouter } from "react-router-dom"
+import "./pagination.css"
 
 class Pagination extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      skip: 0,
+      skip: this.props.match.params.skip,
       page: 1
     }
   }
 
+  componentDidUpdate() {
+    if (this.props.match.params.skip === "0" && this.state.skip !== "0") {
+      this.updateSkip()
+    }
+  }
+
   updateSkip = () => {
-    const newSkip = this.state.skip + 5
-    this.setState({
-      skip: newSkip
-    })
-    // window.location.reload()
+    this.props.paginationData()
+    window.location.reload()
+    window.scrollTo(0, 0)
   }
 
   render() {
-    console.log(this.state.skip)
     return (
-      <div className="menu-section">
-        <div className="menu-links">
-          <Link to={`/stores/${this.state.skip}`} onClick={this.updateSkip}>{this.state.page}</Link>
-          <Link to={`/stores/${this.state.skip}`}>{this.state.page + 1}</Link>
-          <Link to={`/stores/${this.state.skip}`}>{this.state.page + 2} </Link>
+      <div className="pagination-section">
+        <div className="pagination-links">
+          <NavLink to="/stores/0" activeClassName="active" onClick={this.updateSkip}>{this.state.page}</NavLink>
+          <NavLink to="/stores/5" activeClassName="active" onClick={this.updateSkip}>{this.state.page + 1}</NavLink>
+          <NavLink to="/stores/10" activeClassName="active" onClick={this.updateSkip}>{this.state.page + 2}</NavLink>
         </div>
       </div>
     )
   }
 }
 
-export default Pagination
+export default withRouter(Pagination)

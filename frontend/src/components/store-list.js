@@ -1,5 +1,5 @@
 import React from "react"
-// import Pagination from "./pagination"
+import Pagination from "./pagination"
 import "./store-list.css"
 
 class StoresList extends React.Component {
@@ -11,7 +11,10 @@ class StoresList extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props)
+    this.fetchData()
+  }
+
+  fetchData = () => {
     // fetch(`https://wheretovintage.herokuapp.com/stores/${this.props.match.params.skip}`).then(response => (
     fetch(`http://localhost:8080/stores/${this.props.match.params.skip}`).then(response => (
       response.json()
@@ -52,7 +55,8 @@ class StoresList extends React.Component {
             </div>
           </div>
         ))}
-        {/* <Pagination /> */}
+        <Pagination
+          paginationData={this.fetchData} />
       </div>
     )
   }

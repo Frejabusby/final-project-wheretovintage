@@ -5,8 +5,5 @@
   border: solid 2px #c8930b;
   border-radius: 100%; }
 
-.pin img {
-  width: 100%; }
-
 .pin:hover {
   background-color: #c8930b; }

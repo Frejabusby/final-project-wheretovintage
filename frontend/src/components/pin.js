@@ -1,11 +1,10 @@
 import React from "react"
-import { NavLink, withRouter } from "react-router-dom"
+import { Link, withRouter } from "react-router-dom"
 import "./pin.css"
 
 class Pin extends React.Component {
 
   renderPinLink = () => {
-    console.log("pin", this.props.category)
     if (this.props.pathName === undefined) {
       return `/${this.props.name}`
     } else {
@@ -16,9 +15,9 @@ class Pin extends React.Component {
   render() {
     return (
       <div>
-        <NavLink to={this.renderPinLink()} activeClassName="active">
+        <Link to={this.renderPinLink()}>
           <div className="pin" />
-        </NavLink>
+        </Link>
       </div>
     )
   }

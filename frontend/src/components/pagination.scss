@@ -2,34 +2,22 @@
 @import "../themes/fonts";
 @import "../themes/flexbox";
 
-.menu-section {
+.pagination-section {
   @extend %flex-box-row;
   justify-content: center;
   align-items: center;
-  background-color: $color-white;
-  width: 100%;
-}
-
-.menu-section h1 {
-  text-align: center;
-  padding: 20px;
-}
-
-.menu-links {
-  @extend %flex-box-row;
   background-color: $color-dark-gray;
-  justify-content: center;
+  padding: 20px;
   width: 100%;
 }
 
-.menu-section a {
+.pagination-section a {
   font-family: $nanum;
   font-size: 24px;
   color: $color-middle-gray;
-  text-decoration: none;
   margin: 10px 20px;
 }
 
-.menu-section a:hover {
+.pagination-section a:hover, a.active {
   color: $color-white;
 }
