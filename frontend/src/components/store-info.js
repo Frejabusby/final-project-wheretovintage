@@ -1,13 +1,21 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, withRouter } from "react-router-dom"
 import "./store-info.css"
 
 class StoreInfo extends React.Component {
 
+  closeStoreInfo = () => {
+    if (this.props.match.params.category === undefined) {
+      return "/"
+    } else {
+      return `/category/${this.props.category}`
+    }
+  }
+
   render() {
     return (
       <div className="store-section">
-        <Link to="/" className="close-cross"><div className="close" /></Link>
+        <Link to={this.closeStoreInfo()} className="close-cross"><div className="close" /></Link>
         <div className="store-info">
           <h2>{this.props.name}</h2>
           <div className="store-address">
@@ -35,4 +43,4 @@ class StoreInfo extends React.Component {
   }
 }
 
-export default StoreInfo
+export default withRouter(StoreInfo)

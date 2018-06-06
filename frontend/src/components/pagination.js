@@ -12,12 +12,14 @@ class Pagination extends React.Component {
   }
 
   componentDidUpdate() {
-    if (this.props.match.params.skip === "0" && this.state.skip !== "0") {
-      this.updateSkip()
+    console.log(this.props.match.params.skip)
+    // if you'r on another page than 1, reload when menu-link is clicked
+    if (this.props.match.params.skip === "5" && this.state.skip !== "5") {
+      this.updateStoreList()
     }
   }
 
-  updateSkip = () => {
+  updateStoreList = () => {
     this.props.paginationData()
     window.location.reload()
     window.scrollTo(0, 0)
@@ -27,9 +29,9 @@ class Pagination extends React.Component {
     return (
       <div className="pagination-section">
         <div className="pagination-links">
-          <NavLink to="/stores/0" activeClassName="active" onClick={this.updateSkip}>{this.state.page}</NavLink>
-          <NavLink to="/stores/5" activeClassName="active" onClick={this.updateSkip}>{this.state.page + 1}</NavLink>
-          <NavLink to="/stores/10" activeClassName="active" onClick={this.updateSkip}>{this.state.page + 2}</NavLink>
+          <NavLink to="/stores/5" activeClassName="active" onClick={this.updateStoreList}>{this.state.page}</NavLink>
+          <NavLink to="/stores/10" activeClassName="active" onClick={this.updateStoreList}>{this.state.page + 1}</NavLink>
+          <NavLink to="/stores/15" activeClassName="active" onClick={this.updateStoreList}>{this.state.page + 2}</NavLink>
         </div>
       </div>
     )

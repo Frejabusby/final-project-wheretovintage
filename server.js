@@ -46,14 +46,10 @@ app.get("/store", (req, res) => {
 })
 
 app.get("/stores/:skip", (req, res) => {
-  console.log(req.params.skip, "hej")
   const skip = parseInt(req.params.skip)
-  Store.find().sort( { "name": 1 } ).limit(5).skip(skip).then(store => {
+  Store.find().sort( { "name": 1 } ).limit(5).skip(skip - 5).then(store => {
     res.json(store)
   })
-  // Store.find().sort( { "name": 1 } ).then(store => {
-  //   res.json(store)
-  // })
 })
 
 

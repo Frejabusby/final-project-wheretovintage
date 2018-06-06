@@ -10,7 +10,7 @@ class Menu extends React.Component {
         <h1>WhereToVintage</h1>
         <div className="menu-links">
           <Link to="/">Home</Link>
-          <Link to="/stores/0">List all stores</Link>
+          <Link to="/stores/5">List all stores</Link>
         </div>
       </div>
     )

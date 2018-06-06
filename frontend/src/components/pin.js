@@ -5,7 +5,7 @@ import "./pin.css"
 class Pin extends React.Component {
 
   renderPinLink = () => {
-    if (this.props.pathName === undefined) {
+    if (this.props.pathCategory === undefined) {
       return `/${this.props.name}`
     } else {
       return `/category/${this.props.category}/${this.props.name}`

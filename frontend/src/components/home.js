@@ -15,7 +15,8 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://wheretovintage.herokuapp.com/store").then(response => (
+    // fetch("https://wheretovintage.herokuapp.com/store").then(response => (
+    fetch("http://localhost:8080/store").then(response => (
       response.json()
     )).then(json => {
       this.setState({ storeList: json })
@@ -53,7 +54,8 @@ class Home extends React.Component {
         phoneNumber={store.phoneNumber}
         description={store.description}
         site={store.site}
-        openinghours={store.openinghours} />
+        openinghours={store.openinghours}
+        category={store.category} />
     ))
   )
 
@@ -66,7 +68,6 @@ class Home extends React.Component {
         <div className="map-container">
           {paramInfo && this.renderStoreInfo(paramInfo)}
           <Map
-            paramCategory={this.props.match.params.category}
             ifStoreShows={this.state.showsStoreInfo} />
         </div>
       </div>

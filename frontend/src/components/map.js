@@ -23,7 +23,8 @@ class Map extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://wheretovintage.herokuapp.com/store").then(response => (
+    // fetch("https://wheretovintage.herokuapp.com/store").then(response => (
+    fetch("http://localhost:8080/store").then(response => (
       response.json()
     )).then(json => {
       this.setState({ storeList: json })
@@ -31,10 +32,11 @@ class Map extends React.Component {
   }
 
   renderPin = () => {
+    // Filter categories
     let storeList = this.state.storeList
-    if (this.props.paramCategory !== undefined) {
+    if (this.props.match.params.category !== undefined) {
       storeList = storeList.filter(store => (
-        store.category === this.props.paramCategory
+        store.category === this.props.match.params.category
       ))
     }
     return storeList.map(store => (
@@ -44,12 +46,13 @@ class Map extends React.Component {
         key={store.id}
         name={store.name}
         category={store.category}
-        pathName={this.props.match.params.category} />
+        pathCategory={this.props.match.params.category} />
     ))
   }
 
   render() {
     return (
+      // Transform depending on if a store is shown or not
       <div id="map" className={this.props.ifStoreShows ? "shows-store-info map-section " : "map-section"}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: apiKey.apikey }}
