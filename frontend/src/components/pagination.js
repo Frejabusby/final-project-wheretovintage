@@ -12,8 +12,7 @@ class Pagination extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log(this.props.match.params.skip)
-    // if you'r on another page than 1, reload when menu-link is clicked
+    // if you'r on another page than 1 in pagination, reload when menu-link is clicked
     if (this.props.match.params.skip === "5" && this.state.skip !== "5") {
       this.updateStoreList()
     }
